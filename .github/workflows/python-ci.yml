@@ -1,4 +1,4 @@
-name: Python Test
+name: Python API Test
 
 on:
   push:
@@ -18,5 +18,8 @@ jobs:
         with:
           python-version: '3.10'
 
+      - name: Instalar requests
+        run: pip install requests
+
       - name: Ejecutar el script
-        run: python revision.py
+        run: python script.py
