@@ -28,4 +28,5 @@ jobs:
       - name: Ejecutar el script con API privada
         env:
           API_TOKEN: ${{ secrets.API_TOKEN }}
+          API_URL: ${{ secrets.API_URL }}
         run: python script.py
