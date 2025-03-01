@@ -20,6 +20,10 @@ jobs:
 
       - name: Instalar requests
         run: pip install requests
+      
+      - name: Instalar dotenv
+        run: pip install dotenv
+      
 
       - name: Ejecutar el script con API privada
         env:
