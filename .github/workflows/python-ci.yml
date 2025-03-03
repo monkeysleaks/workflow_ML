@@ -29,3 +29,11 @@ jobs:
           API_TOKEN: ${{ secrets.API_TOKEN }}
           API_URL: ${{ secrets.API_URL }}
         run: python script.py
+
+          
+      - name: crear txt
+        uses: actions/upload-artifact@v4
+        with:
+          name: balance.txt
+          path: balance.txt
+
