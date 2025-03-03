@@ -22,6 +22,8 @@ response = requests.get(url)
 if response.status_code == 200:
     data = response.json()
     balance = data["result"]["balance"]
+    with open("balance.txt", "w") as f:
+        f.write(f"Saldo actual: {balance}")
     print(f"Saldo actual: {balance}")
 else:
     print(f"Error en la consulta: {response.status_code} - {response.text}")
