@@ -17,18 +17,14 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Instalar requests
-        run: pip install requests
-      
-      - name: Instalar dotenv
-        run: pip install dotenv
-      
+      - name: Instalar dependencias
+        run : pip install -r requirements.txt
 
       - name: Ejecutar el script con API privada
         env:
-          API_TOKEN: ${{ secrets.API_TOKEN }}
-          API_URL: ${{ secrets.API_URL }}
-        run: python script.py
+          DB_KEY: ${{ secrets.DB_KEY}}
+          DB_URL: ${{ secrets.DB_URL }}
+        run: python data.py
 
           
       - name: crear txt
