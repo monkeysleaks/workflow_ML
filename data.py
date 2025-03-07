@@ -50,5 +50,5 @@ if __name__ == "__main__":
                 print(f"Encontrado {video['code_voe']}")
             else:
                 with open("resultado.txt", "a") as f:
-                    f.write(f"artista: {artista['nombre']}, title: {video['title']}\n") 
+                    f.write(f"artista: {artista['nombre']}, title: {video['title']}, voe: {video['code_voe']}\n") 
                 print(f"No encontrado {video['title']}")

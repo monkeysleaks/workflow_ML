@@ -1,9 +1,7 @@
 name: API Private Test
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   run-python-script:
