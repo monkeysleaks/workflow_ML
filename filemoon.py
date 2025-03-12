@@ -3,6 +3,7 @@ from supabase import create_client, Client
 from supabase.client import ClientOptions
 from icecream import ic
 import json
+import time
 
 url: str = os.environ.get("SUPABASE_URL")
 key: str = os.environ.get("SUPABASE_KEY")
@@ -104,6 +105,7 @@ try:
                 print(f"Error en {artista}, file: {dato['title']}")
                 with open("fallas.txt", "a") as file:
                     file.write(f"{e}, {artista['name']}, {dato['title']} \n") 
+            time.sleep(0.5)
 
                 
 except Exception as e:
