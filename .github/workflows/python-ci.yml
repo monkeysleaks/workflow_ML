@@ -28,6 +28,6 @@ jobs:
       - name: crear txt
         uses: actions/upload-artifact@v4
         with:
-          name: resultado.txt
-          path: resultado.txt
+          name: fallas.txt
+          path: fallas.txt
 
