@@ -1,0 +1,29 @@
+name: filemoon
+
+on:
+  workflow_dispatch:  # Permite ejecutarlo manualmente desde GitHub Actions
+
+jobs:
+  run-python-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: ejecutar filemoon
+        env:
+          DB_KEY: ${{ secrets.DB_KEY}}
+          DB_URL: ${{ secrets.DB_URL }}
+        run: python filemoon.py
+
+      - name: crear txt
+        uses: actions/upload-artifact@v4
+        with:
+          name: resultado.txt
+          path: resultado.txt 

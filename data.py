@@ -3,7 +3,6 @@ import json
 from supabase import create_client, Client
 from supabase.client import ClientOptions
 import os
-import time
 from dotenv import load_dotenv
 
 # Cargar variables de entorno desde un archivo .env (solo en local)
