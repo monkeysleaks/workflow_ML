@@ -34,7 +34,7 @@ def get_data_vid(tabla_vid):
     return response.data
 
 if __name__ == "__main__":
-    with open("resultado.txt", "w") as f:
+    with open("fallas.txt", "w") as f:
         f.write("")
         print("Iniciando")
 
@@ -48,6 +48,6 @@ if __name__ == "__main__":
             if res.status_code == 200:
                 print(f"Encontrado {video['code_voe']}")
             else:
-                with open("resultado.txt", "a") as f:
+                with open("fallas.txt", "a") as f:
                     f.write(f"artista: {artista['nombre']}, title: {video['title']}, voe: {video['code_voe']}\n") 
                 print(f"No encontrado {video['title']}")
