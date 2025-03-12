@@ -77,7 +77,15 @@ def abrir_json(artista):
     with open (path, "r") as file:
         datos = json.load(file)
         for dato in datos:
-            info = {"title": f"{dato["title"]}","code_voe" : f"{dato["code_voe"]}", "code_filemoon": f"{dato["code_filemoon"]}", "length" : f"{dato["length"]}", "file_size": f"{dato["file size"]}", "img": f"{dato["img"]}", "portal": "false"}
+            info = {
+    "title": f"{dato['title']}",
+    "code_voe": f"{dato['code_voe']}",
+    "code_filemoon": f"{dato['code_filemoon']}",
+    "length": f"{dato['length']}",
+    "file_size": f"{dato['file size']}",
+    "img": f"{dato['img']}",
+    "portal": "false"
+}
             informacion.append(info)
     return informacion
 
@@ -101,7 +109,17 @@ try:
         for dato in data_ar_pruebas:
 
             try:
-                informacion = {"artista_id": artista_id, "title": dato["title"], "code_voe": dato["code_voe"],   "code_filemoon": dato["code_filemoon"], "length": dato["length"], "file_size": dato["file_size"], "img":    dato    ["img"], "portal": dato["portal"], "views": 0 }
+                informacion = {
+    'artista_id': artista_id,
+    'title': dato["title"],
+    'code_voe': dato["code_voe"],
+    'code_filemoon': dato["code_filemoon"],
+    'length': dato["length"],
+    'file_size': dato["file_size"],
+    'img': dato["img"],
+    'portal': dato["portal"],
+    'views': 0
+}
                 insert_data("official", "videos", informacion)
             except Exception as e:
                 print(f"Error en {artista}, file: {dato['title']}")
