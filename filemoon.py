@@ -1,12 +1,14 @@
 import os
+from dotenv import load_dotenv
 from supabase import create_client, Client
 from supabase.client import ClientOptions
 from icecream import ic
 import json
 import time
+load_dotenv()
 
-url: str = os.environ.get("SUPABASE_URL")
-key: str = os.environ.get("SUPABASE_KEY")
+url: str = os.environ.get("DB_URL")
+key: str = os.environ.get("DB_KEY")
 supabase: Client = create_client(
     url, 
     key,

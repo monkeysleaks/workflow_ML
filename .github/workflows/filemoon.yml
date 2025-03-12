@@ -13,8 +13,14 @@ jobs:
         with:
           python-version: "3.10"
 
-      - name: Instalar dependencias
-        run: pip install -r requirements.txt
+      - name: Instalar supabase
+        run: pip install supabase
+
+      - name: Instalar icecream
+        run: pip install icecream
+        
+      - name: Instalar dotenv
+        run: pip install python-dotenv
 
       - name: ejecutar filemoon
         env:
