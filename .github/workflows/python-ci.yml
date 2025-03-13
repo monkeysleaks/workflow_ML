@@ -22,7 +22,7 @@ jobs:
         env:
           DB_KEY: ${{ secrets.DB_KEY}}
           DB_URL: ${{ secrets.DB_URL }}
-        run: python filemoon.py
+        run: python data.py
 
           
       - name: crear txt

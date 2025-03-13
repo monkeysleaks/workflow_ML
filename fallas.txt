@@ -1,5 +1,0 @@
-error, artista, title 
-{'code': '23505', 'details': 'Key (title)=(gBBVpNKE.m4v) already exists.', 'hint': None, 'message': 'duplicate key value violates unique constraint "videos_title_key"'}, aikosuzuki, gBBVpNKE.m4v 
-{'code': '23505', 'details': 'Key (title)=(ZEHibOlJ.m4v) already exists.', 'hint': None, 'message': 'duplicate key value violates unique constraint "videos_title_key"'}, aikosuzuki, ZEHibOlJ.m4v 
-{'code': '23505', 'details': 'Key (title)=(gQLHIFNB.m4v) already exists.', 'hint': None, 'message': 'duplicate key value violates unique constraint "videos_title_key"'}, aikosuzuki, gQLHIFNB.m4v 
-{'code': '23505', 'details': 'Key (title)=(roUYYxfV.m4v) already exists.', 'hint': None, 'message': 'duplicate key value violates unique constraint "videos_title_key"'}, aikosuzuki, roUYYxfV.m4v 

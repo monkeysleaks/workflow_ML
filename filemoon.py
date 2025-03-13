@@ -101,7 +101,7 @@ try:
 
     
     for artista in data_ar_official:
-        artista_name = artista["name"]
+        artista_name = "artemisa"
         artista_id = artista["artista_id"]
         print(f"artista_id: {artista_id}")
     
